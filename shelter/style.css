@@ -2,6 +2,8 @@
   --color-nav-link: #cdcdcd;
   --color-nav-active: #f1cdb3;
   --color-white: #ffff;
+  --fonts-color: #545454;
+  --fonts-color-light: #4c4c4c;
 }
 
 * {
@@ -130,4 +132,56 @@
     font-family: Arial, sans-serif;
     font-size: 13px;
     font-weight: 400;
+}
+
+.our-pets--content {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+.our-pets--text {
+  width: 430px;
+  height: 380px;
+}
+
+.about-h2 {
+  width: 370px;
+  height: 90px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45px;
+  color: var(--fonts-color);
+}
+
+.about-first-text {
+  width: 430px;
+  height: 96px;
+  margin-top: 25px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--fonts-color-light);
+}
+
+.about-second-text {
+  width: 430px;
+  height: 144px;
+  margin-top: 25px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--fonts-color-light);
+}
+
+.img-our-pets {
+  width: 300px;
+  height: 408px;
 }
