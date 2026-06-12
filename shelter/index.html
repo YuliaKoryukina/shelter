@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="style.css">
     <title>Cozy House</title>
 </head>
@@ -13,30 +15,32 @@
     <section class="start-screen">
         <header class="header">
             <nav class="navigation">
-                <div class="navigation__logo">
+                <a class="navigation__logo" href="">
                     <span class="navigation__title">Cozy House</span>
                     <span class="navigation__subtitle">Shelter for pets in Boston</span>
-                </div>
+                </a>
                 <ul class="navigation__list">
-                    <li><a class="navigation__link navigation__link--active" href="#">About the shelter</a></li>
-                    <li><a class="navigation__link" href="#">Our pets</a></li>
-                    <li><a class="navigation__link" href="#">Help the shelter</a></li>
-                    <li><a class="navigation__link" href="#">Contacts</a></li>
+                    <li><span class="navigation__link navigation__link--active">About the shelter</span></li>
+                    <li><a class="navigation__link" href="pets.html">Our pets</a></li>
+                    <li><a class="navigation__link" href="#help">Help the shelter</a></li>
+                    <li><a class="navigation__link" href="#contacts">Contacts</a></li>
                 </ul>
             </nav>
         </header>
-        <div class="start-screen-content">
-            <h1 class="start-screen-h1">Not only people need a house</h1>
-            <p class="start-screen-p">We offer to give a chance to a little and nice puppy with an extremely wide and
-                open heart. He or she will love you more than anybody else in the world, you will see!</p>
-            <button class="start-screen-btn">Make a friend</button>
+        <div class="not-only">
+            <div class="not-only__text-block">
+                <h1 class="start-screen-h1">Not only people need a house</h1>
+                <p class="start-screen-p">We offer to give a chance to a little and nice puppy with an extremely wide and
+                    open heart. He or she will love you more than anybody else in the world, you will see!</p>
+                <a class="start-screen-btn" href="#our-friends">Make a friend</a>
+            </div>
+            <img class="start-screen-puppy" src="assets/start-screen-puppy.png" alt="Puppy">
         </div>
-        <img class="start-screen-puppy" src="assets/start-screen-puppy.png" alt="Puppy">
     </section>
-    <section class="our-pets">
-        <div class="our-pets--content">
-            <img class="img-our-pets" src="assets/about-pets.png" alt="Pets">
-            <div class="our-pets--text">
+    <section class="about">
+        <div class="about__content">
+            <img class="about__img" src="assets/about-pets.png" alt="Pets">
+            <div class="about__text">
                 <h2 class="about-h2">About the shelter <br> “Cozy House”</h2>
                 <p class="about-first-text">
                     Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will
@@ -54,28 +58,78 @@
             </div>
         </div>
     </section>
-    <section class="pets">
-        <h3 class="pets-cection-h3">Our friends who <br> are looking for a house
+    <section class="our-friends" id="our-friends">
+        <h3 class="our-friends__title">Our friends who <br> are looking for a house
         </h3>
         <div class="pets-cards">
-            <div class="pets-card">
+            <a class="pets-card" href="pets.html">
                 <img class="pets-card-img" src="assets/pets-katrine.png" alt="Katrine">
                 <p class="pets-card-name">Katrine</p>
-                <button class="pets-card-btn">Learn more</button>
-            </div>
-            <div class="pets-card">
+                <span class="pets-card-btn">Learn more</span>
+            </a>
+            <a class="pets-card" href="pets.html">
                 <img class="pets-card-img" src="assets/pets-jennifer.png" alt="Jennifer">
                 <p class="pets-card-name">Jennifer</p>
-                <button class="pets-card-btn">Learn more</button>
-            </div>
-            <div class="pets-card">
+                <span class="pets-card-btn">Learn more</span>
+            </a>
+            <a class="pets-card" href="pets.html">
                 <img class="pets-card-img" src="assets/pets-woody.png" alt="Woody">
                 <p class="pets-card-name">Woody</p>
-                <button class="pets-card-btn">Learn more</button>
+                <span class="pets-card-btn">Learn more</span>
+            </a>
+        </div>
+        <a class="pets-section-btn" href="pets.html">Get to know the rest</a>
+    </section>
+    <section class="help" id="help">
+        <h2 class="help__title">How you can help our shelter</h2>
+        <div class="help__content">
+            <div class="help__item">
+                <img class="help__icon" src="assets/icons/icon-pet-food.svg" alt="Pet food">
+                <p class="help__caption">Pet food</p>
+            </div>
+            <div class="help__item">
+                <img class="help__icon" src="assets/icons/icon-transportation.svg" alt="Transportation">
+                <p class="help__caption">Transportation</p>
+            </div>
+            <div class="help__item">
+                <img class="help__icon" src="assets/icons/icon-toys.svg" alt="Toys">
+                <p class="help__caption">Toys</p>
+            </div>
+            <div class="help__item">
+                <img class="help__icon" src="assets/icons/icon-bowls-and-cups.svg" alt="Bowls and cups">
+                <p class="help__caption">Bowls and cups</p>
+            </div>
+            <div class="help__item">
+                <img class="help__icon" src="assets/icons/icon-shampoos.svg" alt="Shampoos">
+                <p class="help__caption">Shampoos</p>
+            </div>
+            <div class="help__item">
+                <img class="help__icon" src="assets/icons/icon-vitamins.svg" alt="Vitamins">
+                <p class="help__caption">Vitamins</p>
+            </div>
+            <div class="help__item">
+                <img class="help__icon" src="assets/icons/icon-medicines.svg" alt="Medicines">
+                <p class="help__caption">Medicines</p>
+            </div>
+            <div class="help__item">
+                <img class="help__icon" src="assets/icons/icon-collars-leashes.svg" alt="Collars and leashes">
+                <p class="help__caption">Collars / leashes</p>
+            </div>
+            <div class="help__item">
+                <img class="help__icon" src="assets/icons/icon-sleeping-area.svg" alt="Sleeping areas">
+                <p class="help__caption">Sleeping areas</p>
             </div>
         </div>
-        <button class="pets-section-btn">Get to know the rest</button>
     </section>
+    <section class="in-addition">
+        <h3 class="in-addition-h3">You can also make a donation</h3>
+        <div class="in-addition__content"></div>
+    </section>
+    <footer class="footer" id="contacts">
+        <h3 class="">For questions and suggestions</h3>
+        <h3 class="">We are waiting for your visit</h3>
+        <div class="footer__content"></div>
+    </footer>
 </body>
 
 </html>

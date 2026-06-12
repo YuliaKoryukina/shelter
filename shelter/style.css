@@ -1,7 +1,10 @@
 :root {
+  --color-primary: #f1cdb3;
+  --color-primary-light: #fddcc4;
   --color-nav-link: #cdcdcd;
   --color-nav-active: #f1cdb3;
-  --color-white: #ffff;
+  --color-white: #ffffff;
+  --color-light-s: #fafafa;
   --fonts-color: #545454;
   --fonts-color-light: #4c4c4c;
   --bg-color: #f6f6f6;
@@ -13,11 +16,25 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+
+
 .start-screen {
   position: relative;
+  z-index: 0;
   width: 100%;
-  min-height: 1024px;
+  height: 908px;
   margin: 0 auto;
+  overflow: hidden;
   background-image: url("assets/bg2.png"), url("assets/bg1svg.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
@@ -30,13 +47,30 @@
   background: transparent;
 }
 
-.start-screen-content {
+.header--pets {
+  background-color: var(--bg-color);
+}
+
+.not-only {
   position: relative;
   z-index: 1;
-  width: 460px;
-  height: 322px;
-  margin-top: 250px;
-  margin-left: max(40px, calc((100% - 1280px) / 2 + 40px));
+  display: grid;
+  grid-template-columns: minmax(min-content, 460px) 1fr;
+  grid-template-rows: 253px max-content 243px;
+  grid-template-areas:
+    ". img"
+    "content img"
+    ". img";
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.not-only__text-block {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 42px;
+  max-width: 460px;
 }
 
 .start-screen-h1 {
@@ -45,54 +79,63 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 44px;
   font-weight: 400;
-  line-height: 57px;
+  line-height: 130%;
   color: #ffffff;
 }
 
 .start-screen-p {
   width: 460px;
   height: 72px;
-  margin-top: 42px;
   font-family: Arial, sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
-  color: #cdcdcd;
+  color: var(--color-nav-link);
 }
 
 .start-screen-btn {
+  display: inline-block;
   width: 207px;
   height: 52px;
-  margin-top: 42px;
   border: none;
   border-radius: 100px;
-  background-color: #f1cdb3;
+  background-color: var(--color-primary);
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 17px;
   font-weight: 400;
+  line-height: 52px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
   color: #292929;
   cursor: pointer;
+  transition: background-color 0.3s ease-in;
+}
+
+.start-screen-btn:hover {
+  background-color: var(--color-primary-light);
 }
 
 .start-screen-puppy {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
+  grid-area: img;
+  place-self: end;
+  width: 698px;
+  height: auto;
 }
 
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 30px 40px;
+  padding-top: 30px;
 }
 
 .navigation__list {
   display: flex;
-  gap: 40px;
+  justify-content: space-between;
+  width: 443px;
   list-style: none;
 }
 
@@ -100,17 +143,29 @@
   font-family: Arial, sans-serif;
   font-size: 15px;
   font-weight: 400;
+  line-height: 160%;
   color: var(--color-nav-link);
   text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: color 0.3s;
 }
 
 .navigation__link:hover {
+  color: #fafafa;
   cursor: pointer;
+}
+
+.navigation__link:focus,
+.navigation__link:active {
+  border-bottom: 3px solid transparent;
+  outline: none;
 }
 
 .navigation__link--active {
   border-bottom: 3px solid var(--color-nav-active);
   color: #fafafa;
+  pointer-events: none;
+  cursor: default;
 }
 
 .navigation__logo {
@@ -120,13 +175,21 @@
   width: 184px;
   height: 60px;
   gap: 10px;
+  text-decoration: none;
+  transition: opacity 0.3s;
 }
+
+.navigation__logo:hover {
+  opacity: 0.8;
+}
+
 .navigation__title {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 32px;
   color: var(--color-nav-active);
 }
+
 .navigation__subtitle {
   color: var(--color-white);
   font-family: Arial, sans-serif;
@@ -134,7 +197,32 @@
   font-weight: 400;
 }
 
-.our-pets--content {
+.header--pets .navigation__link {
+  color: var(--fonts-color);
+}
+
+.header--pets .navigation__link:hover {
+  color: #000000;
+}
+
+.header--pets .navigation__link--active {
+  color: var(--fonts-color);
+}
+
+.header--pets .navigation__subtitle {
+  color: var(--fonts-color-light);
+}
+
+.about,
+.our-friends,
+.help,
+.in-addition,
+.footer {
+  position: relative;
+  z-index: 1;
+}
+
+.about__content {
   display: flex;
   justify-content: center;
   gap: 120px;
@@ -144,7 +232,7 @@
   padding: 80px 40px;
 }
 
-.our-pets--text {
+.about__text {
   width: 430px;
   height: 380px;
 }
@@ -155,7 +243,8 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 35px;
   font-weight: 400;
-  line-height: 45px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
   color: var(--fonts-color);
 }
 
@@ -181,17 +270,18 @@
   color: var(--fonts-color-light);
 }
 
-.img-our-pets {
+.about__img {
   width: 300px;
   height: 408px;
 }
-.pets {
+
+.our-friends {
   background-color: var(--bg-color);
   padding-top: 70px;
   padding-bottom: 60px;
 }
 
-.pets-cection-h3 {
+.our-friends__title {
   text-align: center;
   margin: 0 auto;
   color: var(--fonts-color);
@@ -201,7 +291,7 @@
   width: 400px;
   height: 90px;
   letter-spacing: 0.06em;
-  line-height: 1.3;
+  line-height: 130%;
 }
 
 .pets-cards {
@@ -221,11 +311,19 @@
   width: 270px;
   height: 435px;
   background-color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.pets-card:hover {
+  background-color: #fafafa;
+  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.08);
 }
 
 .pets-card-img {
   width: 270px;
   height: 270px;
+  border-radius: 9px 9px 0 0;
 }
 
 .pets-card-name {
@@ -233,12 +331,13 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
   font-weight: 400;
-  line-height: 23px;
-  letter-spacing: 0.06em;
+  line-height: 100%;
+  letter-spacing: 0.1em;
   color: var(--fonts-color);
 }
 
 .pets-card-btn {
+  display: inline-block;
   width: 207px;
   height: 52px;
   margin-top: 30px;
@@ -249,14 +348,18 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 17px;
   font-weight: 400;
+  line-height: 52px;
+  text-align: center;
   color: #292929;
-  cursor: pointer;
+  pointer-events: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.pets-card-btn:hover {
+.pets-card:hover .pets-card-btn {
   background-color: #f1cdb3;
   box-shadow: none;
 }
+
 .pets-section-btn {
   display: block;
   width: 261px;
@@ -268,6 +371,103 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 17px;
   font-weight: 400;
+  line-height: 52px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
   color: #292929;
   cursor: pointer;
+  transition: background-color 0.3s ease-in;
+}
+
+.pets-section-btn:hover {
+  background-color: var(--color-primary-light);
+}
+
+.help {
+  background-color: #ffffff;
+  padding: 80px 0 100px;
+}
+
+.help__title {
+  max-width: 333px;
+  margin: 0 auto;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--fonts-color);
+}
+
+.help__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 114px;
+  row-gap: 59px;
+  max-width: 1040px;
+  width: 100%;
+  margin: 60px auto 0;
+}
+
+.help__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+
+.help__icon {
+  width: 60px;
+  height: 60px;
+}
+
+.help__caption {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: var(--fonts-color);
+}
+
+.in-addition {
+  background-color: var(--bg-color);
+}
+
+.in-addition__content {
+  max-width: 1280px;
+  min-height: 100px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+.footer {
+  background-color: #211f20;
+}
+
+.footer__content {
+  max-width: 1280px;
+  min-height: 160px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.pets-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 70px 40px 100px;
+}
+
+.pets-page__title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--fonts-color);
 }
