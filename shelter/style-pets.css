@@ -35,6 +35,7 @@
   
   .header--pets {
     background-color: var(--color-white);
+    padding-bottom: 30px;
   }
   .navigation {
     display: flex;
@@ -42,7 +43,7 @@
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 30px;
+    padding: 30px 40px 0;
   }
   
   .navigation_list {
@@ -144,10 +145,17 @@
   }
   .our-friends {
     background-color: var(--bg-color);
-    padding-top: 70px;
-    padding-bottom: 60px;
   }
-  
+
+  .our-friends_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px 102px;
+  }
+
   .our-friends_title {
     text-align: center;
     margin: 0 auto;
@@ -160,14 +168,73 @@
     letter-spacing: 0.06em;
     line-height: 130%;
   }
-  
+
   .pets-cards {
     display: flex;
     justify-content: center;
-    gap: 100px;
-    max-width: 1280px;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 40px 0;
+    padding: 0;
+  }
+
+  .our-friends_inner > .pets-cards:first-of-type {
+    margin-top: 59px;
+  }
+
+  .our-friends_inner > .pets-cards + .pets-cards {
+    margin-top: 30px;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 340px;
+    margin: 60px auto 0;
+  }
+
+  .pagination_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    background-color: transparent;
+    color: #292929;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in, border-color 0.3s ease-in, color 0.3s ease-in;
+  }
+
+  .pagination_btn:hover:not(:disabled) {
+    background-color: var(--color-primary-light);
+    border-color: var(--color-primary-light);
+  }
+
+  .pagination_btn:disabled {
+    border-color: var(--color-nav-link);
+    color: var(--color-nav-link);
+    cursor: default;
+  }
+
+  .pagination_counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #292929;
+    background-color: var(--color-primary);
+    border-radius: 50%;
   }
   
   .pets-card {

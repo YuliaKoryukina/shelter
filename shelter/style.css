@@ -294,11 +294,27 @@ body {
 
 .our-friends {
   background-color: var(--bg-color);
-  padding-top: 70px;
-  padding-bottom: 60px;
+}
+
+.our-friends_wrapper {
+  display: grid;
+  grid-template-columns: 52px auto 52px;
+  grid-template-areas:
+    "title title title"
+    "prev cards next"
+    "btn btn btn";
+  row-gap: 60px;
+  column-gap: 43px;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 80px 40px 98px;
 }
 
 .our-friends_title {
+  grid-area: title;
   text-align: center;
   margin: 0 auto;
   color: var(--fonts-color);
@@ -311,13 +327,71 @@ body {
   line-height: 130%;
 }
 
-.pets-cards {
+.pagination_btn {
   display: flex;
   justify-content: center;
-  gap: 100px;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 60px 40px 0;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  background-color: transparent;
+  color: #292929;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in, border-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+.pagination_btn:hover:not(:disabled) {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+}
+
+.pagination_btn:disabled {
+  border-color: var(--color-nav-link);
+  color: var(--color-nav-link);
+  cursor: default;
+}
+
+.pagination_btn--prev {
+  grid-area: prev;
+  background-image: url("assets/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+}
+
+.pagination_btn--next {
+  grid-area: next;
+  background-image: url("assets/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pagination_counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+.pets-cards {
+  grid-area: cards;
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  max-width: 990px;
+  margin: 0;
+  padding: 0;
 }
 
 .pets-card {
@@ -378,10 +452,11 @@ body {
 }
 
 .pets-section-btn {
+  grid-area: btn;
   display: block;
   width: 261px;
   height: 52px;
-  margin: 60px auto 0;
+  margin: 0 auto;
   border: none;
   border-radius: 100px;
   background-color: #f1cdb3;
