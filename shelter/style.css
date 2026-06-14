@@ -196,7 +196,7 @@ body {
 .navigation_title {
   display: block;
   width: 184px;
-  height: 35px;
+  height: 60px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 32px;
@@ -246,7 +246,7 @@ body {
   align-items: center;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 80px 40px;
+  padding: 80px 40px 100px;
 }
 
 .about_text {
@@ -429,7 +429,7 @@ body {
 
 .pets-card-btn {
   display: inline-block;
-  width: 207px;
+  width: 187px;
   height: 52px;
   margin-top: 30px;
   border: none;

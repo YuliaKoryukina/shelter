@@ -37,13 +37,14 @@
     background-color: var(--color-white);
     padding-bottom: 30px;
   }
+
   .navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30px 40px 0;
+    padding-top: 30px;
   }
   
   .navigation_list {
@@ -272,7 +273,7 @@
   
   .pets-card-btn {
     display: inline-block;
-    width: 207px;
+    width: 187px;
     height: 52px;
     margin-top: 30px;
     border: none;
