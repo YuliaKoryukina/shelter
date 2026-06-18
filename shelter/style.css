@@ -949,9 +949,16 @@ body {
     margin-left: 20px;
   }
 
+  .footer_column--locations .footer_title {
+    width: 270px;
+    height: 90px;
+    margin-left: -15px;
+  }
+
   .footer_link--location {
     justify-content: flex-start;
     text-align: left;
+    margin-left: -20px;
   }
 
   .footer_puppy {
