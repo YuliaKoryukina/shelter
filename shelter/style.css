@@ -214,6 +214,27 @@ body {
   letter-spacing: 0.10em;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hamburger_line {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #f1cdb3;
+}
+
 .header--pets .navigation_link {
   color: var(--fonts-color);
 }
@@ -968,5 +989,23 @@ body {
     width: 100%;
     max-width: 300px;
     height: auto;
+  }
+}
+
+/* index — mobile 320px–767px */
+@media screen and (max-width: 767px) {
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navigation_list {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-shrink: 0;
   }
 }
