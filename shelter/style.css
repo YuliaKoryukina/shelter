@@ -922,7 +922,7 @@ body {
     max-width: 100%;
     min-height: 639px;
     margin: 0 auto;
-    padding: 40px 30px 40px;
+    padding: 40px 30px 0;
     box-sizing: border-box;
   }
 
