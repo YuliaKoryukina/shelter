@@ -1032,6 +1032,7 @@ body {
     width: 184px;
     height: 60px;
     flex-shrink: 0;
+    transform: translateX(10px);
   }
 
   .navigation_list {
@@ -1041,6 +1042,7 @@ body {
   .hamburger {
     display: flex;
     flex-shrink: 0;
+    transform: translateX(-10px);
   }
 
   .not-only {
@@ -1066,10 +1068,11 @@ body {
     height: auto;
     min-height: 64px;
     margin: 0 auto;
-    font-size: 32px;
-    line-height: 32px;
-    text-align: left;
+    font-size: 25px;
+    line-height: 1.3;
+    text-align: center;
     align-self: center;
+    letter-spacing: 0.06em;
   }
 
   .start-screen-h1_second {
@@ -1082,7 +1085,7 @@ body {
     max-width: 100%;
     height: 96px;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
   }
 
   .start-screen-puppy {
@@ -1090,21 +1093,21 @@ body {
     width: 100%;
     max-width: calc(260px + (309 + 309 * 0.7) * (100vw - 320px) / 767);
     margin: 0;
+    transform: translateX(20px);
   }
 
   .about_content {
     width: 100%;
-    max-width: 100%;
+    max-width: calc(300px + (205 + 205 * 0.7) * (100vw - 320px) / 767);
     min-height: auto;
     margin: 42px auto;
-    padding: 0 10px;
-    box-sizing: border-box;
+    padding: 0;
     gap: 42px;
   }
 
   .about_text {
     margin-top: 0;
-    max-width: 100%;
+    max-width: calc(270px + (160 + 160 * 0.7) * (100vw - 320px) / 767);
   }
 
   .about-h2 {
@@ -1117,12 +1120,12 @@ body {
   .about-first-text,
   .about-second-text {
     max-width: 100%;
-    padding: 0 25px;
+    padding: 0;
     box-sizing: border-box;
   }
 
   .about_img {
-    max-width: 100%;
+    max-width: calc(260px + (40 + 40 * 0.7) * (100vw - 320px) / 767);
   }
 
   .our-friends_wrapper {
@@ -1183,22 +1186,44 @@ body {
   }
 
   .help_content {
-    width: 100%;
-    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: auto;
+    max-width: none;
     margin: 42px auto 0;
-    padding: 0 10px;
+    margin-left: calc(15px + (54 + 54 * 0.7) * (100vw - 320px) / 767);
+    margin-right: calc(15px + (54 + 54 * 0.7) * (100vw - 320px) / 767);
+    padding: 0;
     box-sizing: border-box;
-    column-gap: 10px;
-    row-gap: 42px;
+    column-gap: 0;
+    row-gap: calc(31px + (27 + 27 * 0.7) * (100vw - 320px) / 767);
+  }
+
+  .help_item {
+    width: 130px;
+    row-gap: 21px;
+  }
+
+  .help_item:nth-child(8) {
+    max-width: 170px;
+  }
+
+  .help_icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .help_caption {
+    font-size: 15px;
   }
 
   .donation {
     width: 100%;
-    max-width: 100%;
+    max-width: calc(300px + (205 + 205 * 0.7) * (100vw - 320px) / 767);
     min-height: auto;
     margin: 0 auto;
-    padding: 42px 10px;
-    box-sizing: border-box;
+    padding: 42px 0;
     row-gap: 43px;
   }
 
@@ -1208,11 +1233,16 @@ body {
   }
 
   .donation_img {
-    max-width: 100%;
+    max-width: calc(260px + (245 + 245 * 0.7) * (100vw - 320px) / 767);
   }
 
   .donation_title,
   .donation_card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .donation_note {
     width: 100%;
     max-width: 100%;
   }
@@ -1236,11 +1266,10 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 100%;
+    max-width: calc(300px + (408 + 408 * 0.7) * (100vw - 320px) / 767);
     min-height: auto;
     margin: 0 auto;
-    padding: 0 10px 42px;
-    box-sizing: border-box;
+    padding: 0 0 42px;
     row-gap: 40px;
   }
 
@@ -1274,8 +1303,48 @@ body {
     row-gap: 105px;
   }
 
+  .about-h2,
   .our-friends_title,
-  .help_title {
+  .help_title,
+  .donation_title,
+  .footer_title {
+    font-size: 25px;
+    line-height: 130%;
     text-align: center;
+    letter-spacing: 0.06em;
+  }
+
+  .about-first-text,
+  .about-second-text {
+    text-align: justify;
+  }
+
+  .help_item:nth-child(8) {
+    max-width: 135px;
+  }
+
+  .donation_info {
+    row-gap: 23px;
+    text-align: center;
+  }
+
+  .donation_card {
+    width: 281px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .donation_card span {
+    font-size: 15px;
+    line-height: 110%;
+  }
+
+  .donation_note {
+    padding: 0 10px;
+    text-align: justify;
+  }
+
+  .footer_column--locations .footer_link:nth-of-type(2) {
+    padding-right: 30px;
   }
 }
