@@ -26,8 +26,6 @@ body {
   font-weight: 400;
 }
 
-
-
 .start-screen {
   position: relative;
   z-index: 0;
@@ -215,7 +213,7 @@ body {
   font-family: Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.1em;
 }
 
 .hamburger {
@@ -364,7 +362,8 @@ body {
   background-color: transparent;
   color: #292929;
   cursor: pointer;
-  transition: background-color 0.3s ease-in, border-color 0.3s ease-in, color 0.3s ease-in;
+  transition: background-color 0.3s ease-in, border-color 0.3s ease-in,
+    color 0.3s ease-in;
 }
 
 .pagination_btn:hover:not(:disabled) {
@@ -426,7 +425,7 @@ body {
   border-radius: 9px;
   width: 270px;
   height: 435px;
-  background-color: #ffffff;
+  background-color: #fafafa;
   text-decoration: none;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
@@ -459,7 +458,7 @@ body {
   margin-top: 30px;
   border: none;
   border-radius: 100px;
-  background-color: #ffffff;
+  background-color: #fafafa;
   box-shadow: inset 0 0 0 2px #f1cdb3;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 17px;
@@ -516,6 +515,10 @@ body {
   letter-spacing: 0.06em;
   text-align: center;
   color: var(--fonts-color);
+}
+
+.help_title-second {
+  display: inline;
 }
 
 .help_content {
@@ -584,6 +587,10 @@ body {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: var(--fonts-color);
+}
+
+.donation_title-second {
+  display: inline;
 }
 
 .donation_bank {
@@ -790,7 +797,6 @@ body {
   .navigation_list {
     width: auto;
     gap: 35px;
-    
   }
 
   .about_content {
@@ -848,7 +854,7 @@ body {
   .pets-cards {
     gap: 40px;
     max-width: 100%;
-    margin-top: -30px
+    margin-top: -30px;
   }
 
   .pets-cards .pets-card:nth-child(3) {
@@ -1077,7 +1083,7 @@ body {
 
   .start-screen-h1_second {
     display: block;
-    margin-top: 4px;
+    margin-top: 0px;
   }
 
   .start-screen-p {
@@ -1099,7 +1105,7 @@ body {
   .about_content {
     width: 100%;
     max-width: calc(300px + (205 + 205 * 0.7) * (100vw - 320px) / 767);
-    min-height: auto;
+    min-height: 791px;
     margin: 42px auto;
     padding: 0;
     gap: 42px;
@@ -1155,12 +1161,24 @@ body {
     width: 100%;
     justify-content: center;
     gap: 0;
-    margin-top: 0;
+    margin-top: 30px;
   }
 
   .pets-cards .pets-card:nth-child(2),
   .pets-cards .pets-card:nth-child(3) {
     display: none;
+  }
+
+  .pets-card-name,
+  .pets-card-btn {
+    position: relative;
+    top: 10px;
+  }
+  .pets-card-name {
+    letter-spacing: 0.06em;
+  }
+  .pets-card-btn {
+    letter-spacing: 0.06em;
   }
 
   .pagination_btn--prev,
@@ -1171,18 +1189,26 @@ body {
 
   .pets-section-btn {
     margin-top: 42px;
-    transform: none;
+    transform: translateY(8px);
   }
 
   .help {
-    min-height: auto;
+    min-height: 745px;
     padding: 42px 0;
   }
 
   .help_title {
     max-width: calc(300px + (33 + 33 * 0.7) * (100vw - 320px) / 767);
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 0;
     padding: 0;
+    text-align: center;
+    transform: translateY(5px);
+  }
+
+  .help_title-second {
+    display: block;
   }
 
   .help_content {
@@ -1216,12 +1242,17 @@ body {
 
   .help_caption {
     font-size: 15px;
+    transform: translateY(8px);
+  }
+
+  .help_item:nth-child(8) .help_caption {
+    white-space: nowrap;
   }
 
   .donation {
     width: 100%;
     max-width: calc(300px + (205 + 205 * 0.7) * (100vw - 320px) / 767);
-    min-height: auto;
+    min-height: 542px;
     margin: 0 auto;
     padding: 42px 0;
     row-gap: 43px;
@@ -1242,13 +1273,29 @@ body {
     max-width: 100%;
   }
 
+  .donation_title {
+    transform: translateY(5px);
+  }
+
+  .donation_title-second {
+    display: block;
+  }
+
+  .donation_bank {
+    letter-spacing: 0;
+    transform: translateY(5px);
+  }
+  .donation_card {
+    transform: translateY(5px);
+  }
+
   .donation_note {
     width: 100%;
     max-width: 100%;
   }
 
   .footer {
-    min-height: auto;
+    min-height: 809px;
     padding-top: 30px;
   }
 
@@ -1287,14 +1334,27 @@ body {
     height: auto;
     margin-left: 0;
   }
-
+  .navigation_subtitle {
+    letter-spacing: 0.1em;
+  }
   .footer_link--location {
     justify-content: center;
     margin-left: 0;
+    transform: translateY(15px);
+  }
+
+  .footer_column--locations .footer_link--location:nth-of-type(1) span {
+    position: relative;
+    top: -5px;
+  }
+
+  .footer_column--locations .footer_link--location:nth-of-type(2) {
+    transform: translateY(20px);
   }
 
   .footer_puppy {
     max-width: calc(260px + (40 + 40 * 0.7) * (100vw - 320px) / 767);
+    transform: translateY(15px);
   }
 }
 
