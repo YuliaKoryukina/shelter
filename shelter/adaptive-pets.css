@@ -1,0 +1,335 @@
+/* pets — laptop / small desktop 1279px */
+@media screen and (max-width: 1279px) {
+  .our-friends_inner {
+    max-width: 100%;
+    margin-left: calc(94px + (-54 - 54 * 0.7) * (100vw - 768px) / 1279);
+    margin-right: calc(94px + (-54 - 54 * 0.7) * (100vw - 768px) / 1279);
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: calc(77px + (25 + 25 * 0.7) * (100vw - 768px) / 1279);
+    box-sizing: border-box;
+  }
+
+  .our-friends_inner > .pets-cards:first-of-type {
+    margin-top: calc(30px + (29 + 29 * 0.7) * (100vw - 768px) / 1279);
+  }
+
+  .pets-cards {
+    flex-wrap: wrap;
+    gap: 30px 40px;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pagination {
+    margin-top: calc(42px + (18 + 18 * 0.7) * (100vw - 768px) / 1279);
+  }
+}
+
+/* pets — tablet 768px */
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navigation {
+    max-width: 100%;
+    padding: 30px 30px 0;
+  }
+
+  .navigation_list {
+    width: auto;
+    gap: 35px;
+  }
+
+  .our-friends_inner {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 30px 77px;
+    box-sizing: border-box;
+  }
+
+  .our-friends_title {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .our-friends_inner > .pets-cards:first-of-type {
+    margin-top: 30px;
+  }
+
+  .our-friends_inner > .pets-cards + .pets-cards {
+    margin-top: 30px;
+  }
+
+  .pets-cards {
+    flex-wrap: wrap;
+    gap: 30px 40px;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .our-friends_inner > .pets-cards + .pets-cards .pets-card:nth-child(3),
+  .our-friends_inner > .pets-cards + .pets-cards .pets-card:nth-child(4) {
+    display: none;
+  }
+
+  .pagination {
+    margin-top: 42px;
+  }
+
+  .footer {
+    width: 100%;
+    min-height: 639px;
+    height: auto;
+    padding-top: 0;
+    box-sizing: border-box;
+  }
+
+  .footer_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 38px;
+    row-gap: 65px;
+    width: 768px;
+    max-width: 100%;
+    min-height: 639px;
+    margin: 0 auto;
+    padding: 40px 30px 0;
+    box-sizing: border-box;
+  }
+
+  .footer_column {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    max-width: 302px;
+    align-items: flex-start;
+    text-align: left;
+    padding-top: 0;
+    margin-left: 35px;
+    margin-top: -10px;
+  }
+
+  .footer_column--locations {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    max-width: 320px;
+    align-items: flex-start;
+    text-align: left;
+    gap: 32px;
+    margin-left: 20px;
+  }
+
+  .footer_column--locations .footer_title {
+    width: 270px;
+    height: 90px;
+    margin-left: -15px;
+  }
+
+  .footer_link--location {
+    justify-content: flex-start;
+    text-align: left;
+    margin-left: -20px;
+  }
+
+  .footer_puppy {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+}
+
+/* pets — mobile 320px–767px */
+@media screen and (max-width: 767px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .header--pets {
+    padding-bottom: 0;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 66px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 30px 10px 0;
+    box-sizing: border-box;
+  }
+
+  .navigation_logo {
+    width: 184px;
+    height: 60px;
+    flex-shrink: 0;
+    transform: translateX(10px);
+  }
+
+  .navigation_list {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-shrink: 0;
+    transform: translateX(-10px);
+  }
+
+  .navigation_subtitle {
+    letter-spacing: 0.1em;
+  }
+
+  .our-friends_inner {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 42px 10px;
+    box-sizing: border-box;
+  }
+
+  .our-friends_title {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .our-friends_inner > .pets-cards:first-of-type {
+    margin-top: 42px;
+  }
+
+  .our-friends_inner > .pets-cards + .pets-cards {
+    margin-top: 30px;
+  }
+
+  .our-friends_inner > .pets-cards + .pets-cards .pets-card:nth-child(3),
+  .our-friends_inner > .pets-cards + .pets-cards .pets-card:nth-child(4) {
+    display: flex;
+  }
+
+  .pets-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pets-card {
+    width: 270px;
+    height: 435px;
+  }
+
+  .pets-card-img {
+    width: 270px;
+    height: 270px;
+  }
+
+  .pagination {
+    width: 340px;
+    max-width: 100%;
+    margin-top: 42px;
+  }
+
+  .footer {
+    min-height: 809px;
+    padding-top: 30px;
+  }
+
+  .footer_column {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .footer_column--locations {
+    margin-left: 0;
+  }
+
+  .footer_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: calc(300px + (408 + 408 * 0.7) * (100vw - 320px) / 767);
+    min-height: auto;
+    margin: 0 auto;
+    padding: 0 0 42px;
+    row-gap: 40px;
+  }
+
+  .footer_column,
+  .footer_column--locations {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer_column--locations .footer_title {
+    width: 100%;
+    max-width: 270px;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .footer_link--location {
+    justify-content: center;
+    margin-left: 0;
+    transform: translateY(15px);
+  }
+
+  .footer_column--locations .footer_link--location:nth-of-type(1) span {
+    position: relative;
+    top: -5px;
+  }
+
+  .footer_column--locations .footer_link--location:nth-of-type(2) {
+    transform: translateY(20px);
+  }
+
+  .footer_puppy {
+    max-width: calc(260px + (40 + 40 * 0.7) * (100vw - 320px) / 767);
+    transform: translateY(15px);
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .our-friends_title,
+  .footer_title {
+    font-size: 25px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+
+  .pagination {
+    width: 300px;
+  }
+
+  .footer_column--locations .footer_link:nth-of-type(2) {
+    padding-right: 30px;
+  }
+}
