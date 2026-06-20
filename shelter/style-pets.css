@@ -144,6 +144,28 @@
   .header--pets .navigation_subtitle {
     color: var(--fonts-color-light);
   }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .hamburger_line {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #000000;
+  }
+
   .our-friends {
     background-color: var(--bg-color);
   }

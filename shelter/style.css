@@ -26,8 +26,6 @@ body {
   font-weight: 400;
 }
 
-
-
 .start-screen {
   position: relative;
   z-index: 0;
@@ -81,6 +79,10 @@ body {
   font-weight: 400;
   line-height: 130%;
   color: #ffffff;
+}
+
+.start-screen-h1_second {
+  display: inline;
 }
 
 .start-screen-p {
@@ -211,7 +213,28 @@ body {
   font-family: Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.1em;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hamburger_line {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #f1cdb3;
 }
 
 .header--pets .navigation_link {
@@ -339,7 +362,8 @@ body {
   background-color: transparent;
   color: #292929;
   cursor: pointer;
-  transition: background-color 0.3s ease-in, border-color 0.3s ease-in, color 0.3s ease-in;
+  transition: background-color 0.3s ease-in, border-color 0.3s ease-in,
+    color 0.3s ease-in;
 }
 
 .pagination_btn:hover:not(:disabled) {
@@ -401,7 +425,7 @@ body {
   border-radius: 9px;
   width: 270px;
   height: 435px;
-  background-color: #ffffff;
+  background-color: #fafafa;
   text-decoration: none;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
@@ -434,7 +458,7 @@ body {
   margin-top: 30px;
   border: none;
   border-radius: 100px;
-  background-color: #ffffff;
+  background-color: #fafafa;
   box-shadow: inset 0 0 0 2px #f1cdb3;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 17px;
@@ -491,6 +515,10 @@ body {
   letter-spacing: 0.06em;
   text-align: center;
   color: var(--fonts-color);
+}
+
+.help_title-second {
+  display: inline;
 }
 
 .help_content {
@@ -559,6 +587,10 @@ body {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: var(--fonts-color);
+}
+
+.donation_title-second {
+  display: inline;
 }
 
 .donation_bank {
