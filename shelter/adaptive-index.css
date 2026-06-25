@@ -855,7 +855,8 @@
   }
 }
 
-@media screen and (max-width: 439px) {
+/* menu — 320px–375px */
+@media screen and (max-width: 375px) {
   @keyframes menu-open {
     from {
       opacity: 0;
@@ -923,7 +924,8 @@
   }
 }
 
-@media screen and (min-width: 440px) and (max-width: 767px) {
+/* menu — 375px–767px */
+@media screen and (min-width: 375px) and (max-width: 767px) {
   @keyframes menu-open {
     from {
       opacity: 0;
