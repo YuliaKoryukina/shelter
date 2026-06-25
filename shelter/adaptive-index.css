@@ -856,6 +856,18 @@
 }
 
 @media screen and (max-width: 767px) {
+  @keyframes menu-open {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
   .navigation.navigation--open {
     position: fixed;
     top: 0;
@@ -871,7 +883,11 @@
     gap: 40px;
     padding: 0;
   }
-  
+
+  .navigation.navigation--open {
+    animation: menu-open 0.5s ease forwards;
+  }
+
   .navigation.navigation--open .navigation_list {
     display: flex;
     flex-direction: column;
