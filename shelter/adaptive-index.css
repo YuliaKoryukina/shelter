@@ -856,19 +856,17 @@
 }
 
 @media screen and (max-width: 767px) {
-  
-
   .navigation.navigation--open {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #292929; 
+    background-color: #292929;
     z-index: 999;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     gap: 40px;
     padding: 0;
@@ -894,6 +892,12 @@
     position: absolute;
     right: 10px;
     top: 44px;
+  }
+  .hamburger {
+    transition: transform 0.3s ease;
+  }
+  .hamburger.hamburger--open {
+    transform: rotate(-90deg);
   }
   .start-screen:has(.navigation--open) .not-only,
   body:has(.navigation--open) section:not(.start-screen),
