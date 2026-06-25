@@ -871,6 +871,7 @@
     gap: 40px;
     padding: 0;
   }
+  
   .navigation.navigation--open .navigation_list {
     display: flex;
     flex-direction: column;
