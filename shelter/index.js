@@ -24,3 +24,42 @@ document.addEventListener('click', (event) => {
     closeMenu();
   }
 });
+
+// Блокировка скролла меню
+function preventMenuScroll(event) {
+  if (nav.classList.contains('navigation--open')) {
+    event.preventDefault();
+  }
+}
+
+function lockMenuScroll() {
+  document.body.classList.add('menu-open');
+  document.addEventListener('wheel', preventMenuScroll, { passive: false });
+  document.addEventListener('touchmove', preventMenuScroll, { passive: false });
+}
+
+function unlockMenuScroll() {
+  document.body.classList.remove('menu-open');
+  document.removeEventListener('wheel', preventMenuScroll);
+  document.removeEventListener('touchmove', preventMenuScroll);
+}
+
+hamburger.addEventListener('click', () => {
+  if (nav.classList.contains('navigation--open')) {
+    lockMenuScroll();
+  } else {
+    unlockMenuScroll();
+  }
+});
+
+document.querySelectorAll('.navigation_link').forEach(link => {
+  link.addEventListener('click', () => {
+    unlockMenuScroll();
+  });
+});
+
+document.addEventListener('click', () => {
+  if (!nav.classList.contains('navigation--open')) {
+    unlockMenuScroll();
+  }
+});

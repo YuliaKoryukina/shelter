@@ -26,6 +26,10 @@
     font-family: Georgia, Arial, Helvetica, sans-serif;
     font-weight: 400;
   }
+
+  body.menu-open {
+    overflow: hidden;
+  }
   
   .header {
     position: relative;
