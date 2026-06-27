@@ -48,6 +48,9 @@ function getRandomGroup(excludedNames, count) {
 function createPetCard(pet) {
   const card = document.createElement('div');
   card.className = 'pets-card';
+  card.dataset.name = pet.name;
+  card.setAttribute('role', 'button');
+  card.setAttribute('tabindex', '0');
   card.innerHTML = `
     <img class="pets-card-img" src="${pet.img}" alt="${pet.name}">
     <p class="pets-card-name">${pet.name}</p>

@@ -30,6 +30,7 @@ function createPetCard(pet) {
   const card = document.createElement('a');
   card.className = 'pets-card';
   card.href = 'pets.html';
+  card.dataset.name = pet.name;
   card.innerHTML = `
     <img class="pets-card-img" src="${pet.img}" alt="${pet.name}">
     <p class="pets-card-name">${pet.name}</p>
