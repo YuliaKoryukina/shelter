@@ -9,6 +9,7 @@
     <link rel="icon" href="assets/favicon.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="adaptive-index.css">
+    <link rel="stylesheet" href="popup.css">
     <title>Cozy House</title>
 </head>
 
@@ -69,22 +70,12 @@
             <h3 class="our-friends_title">Our friends who <br> are looking for a house
             </h3>
             <button class="pagination_btn pagination_btn--prev" type="button" aria-label="Previous"></button>
-            <div class="pets-cards">
-                <a class="pets-card" href="pets.html">
-                    <img class="pets-card-img" src="assets/pets-katrine.png" alt="Katrine">
-                    <p class="pets-card-name">Katrine</p>
-                    <span class="pets-card-btn">Learn more</span>
-                </a>
-                <a class="pets-card" href="pets.html">
-                    <img class="pets-card-img" src="assets/pets-jennifer.png" alt="Jennifer">
-                    <p class="pets-card-name">Jennifer</p>
-                    <span class="pets-card-btn">Learn more</span>
-                </a>
-                <a class="pets-card" href="pets.html">
-                    <img class="pets-card-img" src="assets/pets-woody.png" alt="Woody">
-                    <p class="pets-card-name">Woody</p>
-                    <span class="pets-card-btn">Learn more</span>
-                </a>
+            <div class="carousel">
+                <div class="carousel__track">
+                    <div class="carousel__slide carousel__slide--left"></div>
+                    <div class="carousel__slide carousel__slide--active"></div>
+                    <div class="carousel__slide carousel__slide--right"></div>
+                </div>
             </div>
             <button class="pagination_btn pagination_btn--next" type="button" aria-label="Next"></button>
             <a class="pets-section-btn" href="pets.html">Get to know the rest</a>
@@ -176,8 +167,9 @@
             <img class="footer_puppy" src="assets/footer-puppy.png" alt="Puppy">
         </div>
     </footer>
-    <script src="index.js">
-    </script>
+    <script src="slider.js"></script>
+    <script src="popup.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
